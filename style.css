@@ -7,187 +7,134 @@
 
 body {
   background-color: #081b29;
-  color: white;
+  color: #fff;
 }
 
 .header {
+  width: 100%;
+  padding: 20px 10%;
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  padding: 20px 10%;
+  background: #081b29;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 100;
+  z-index: 1000;
 }
 
 .logo {
-  font-size: 25px;
-  color: #ededed;
+  font-size: 24px;
+  font-weight: 700;
+  color: #00abf0;
   text-decoration: none;
-  font-weight: 600;
-  position: relative;
 }
 
-.navber a {
-  font-size: 18px;
+.navbar a {
   color: #ededed;
   text-decoration: none;
+  margin-left: 30px;
   font-weight: 500;
-  margin-left: 35px;
+  transition: 0.3s;
 }
 
-.navber a:hover,
-.navber a.active {
+.navbar a:hover,
+.navbar a.active {
   color: #00abf0;
 }
 
 .home {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
   height: 100vh;
-  padding: 0 10%;
-  background-image: url('your-image.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
-.home h1 {
-  font-size: 56px;
-  font-weight: 700;
-  color: #ededed;
-}
-
-.home h3 {
-  font-size: 32px;
-  font-weight: 700;
-  color: #00abf0;
-  margin: 10px 0;
-}
-
-.home p {
-  font-size: 16px;
-  margin: 20px 0 40px;
-  max-width: 600px;
-}
-
-.btn-box {
   display: flex;
-  gap: 20px;
-}
-
-.btn-box a {
-  padding: 12px 25px;
-  background: #00abf0;
-  color: black;
-  border-radius: 8px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.btn-box a:hover {
-  background: black;
-  color: #00abf0;
-  border: 1px solid #00abf0;
-}
-
-.home-sci {
-  margin-top: 30px;
-  display: flex;
-  gap: 20px;
-}
-
-.home-sci a {
-  width: 40px;
-  height: 40px;
-  background: transparent;
-  border: 2px solid #00abf0;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  padding: 100px 10%;
+  background: #081b29;
+}
+
+.content {
+  max-width: 600px;
+  text-align: center;
+}
+
+.content h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.content h1 span {
   color: #00abf0;
-  text-decoration: none;
-  transition: 0.3s;
 }
 
-.home-sci a:hover {
-  background: #00abf0;
-  color: #000;
-}
-
-/* Contact Section */
-#contact {
-  padding: 60px 10%;
-  background-color: #081b29;
-}
-
-#contact h2 {
+.content h2 {
+  font-size: 24px;
   color: #00abf0;
-  font-size: 30px;
   margin-bottom: 20px;
 }
 
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+.content p {
+  font-size: 16px;
+  margin-bottom: 30px;
+  line-height: 1.6;
 }
 
-.contact-form input,
-.contact-form textarea {
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  resize: none;
-}
-
-.contact-form button {
-  padding: 12px;
-  background-color: #00abf0;
-  color: black;
-  border: none;
-  border-radius: 5px;
-  font-weight: bold;
-  cursor: pointer;
+.buttons a {
+  text-decoration: none;
+  color: #fff;
+  background: #00abf0;
+  padding: 12px 25px;
+  margin: 0 10px;
+  border-radius: 8px;
+  font-weight: 600;
   transition: 0.3s;
 }
 
-.contact-form button:hover {
-  background-color: black;
-  color: #00abf0;
+.buttons a:hover {
+  background: #007bbd;
 }
 
-/* Responsive */
+.socials {
+  margin-top: 30px;
+}
+
+.socials a {
+  text-decoration: none;
+  color: #00abf0;
+  font-size: 20px;
+  margin: 0 10px;
+  transition: 0.3s;
+}
+
+.socials a:hover {
+  color: #fff;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
-  .navber {
+  .header {
+    padding: 15px 5%;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
   }
 
-  .navber a {
-    margin: 10px 0;
+  .navbar {
+    margin-top: 10px;
   }
 
-  .home h1 {
-    font-size: 40px;
+  .navbar a {
+    display: inline-block;
+    margin: 5px 15px 5px 0;
   }
 
-  .home h3 {
-    font-size: 24px;
+  .home {
+    padding: 80px 5%;
   }
 
-  .btn-box {
-    flex-direction: column;
+  .content h1 {
+    font-size: 36px;
   }
 
-  .btn-box a {
-    width: 100%;
+  .content h2 {
+    font-size: 20px;
   }
 }
